@@ -1,0 +1,50 @@
+.feedback_cont {
+    @include flex (row, center, center, wrap);
+    margin-top: 50px;
+}
+
+.feedback_name,
+.feedback_number {
+    @include flex (column, center, flex-start, wrap);
+    width: 40%;
+    font-size: 22px;
+    input {
+        width: 90%;
+        height: 40px;
+        margin-top: 10px;
+    }
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 15px 45px;
+    font-size: 22px;
+    color: $color_text_w;
+    background-color: $color_text_b;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: $color_spec;
+        transition: all .3s;
+    }
+}
+
+
+@media (max-width: $tablet){
+    .feedback_cont {
+        @include flex (column, center, center, wrap);
+    }
+
+    .feedback_name,
+    .feedback_number {
+        @include flex (column, center, flex-start, wrap);
+        width: 90%;
+        font-size: 22px;
+        input {
+            margin-bottom: 25px;
+        }
+    }
+}

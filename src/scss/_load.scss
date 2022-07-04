@@ -1,0 +1,58 @@
+.load {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100000;
+    background-color: $color_text_b;
+    margin: 0;
+    color: $color_text_w;
+    transform: translate(0px, 0px);
+    transition: all 1.2s ease;
+}
+
+.load.hidden{
+    opacity: 1;
+    z-index: 0;
+    transform: translate(0px, 100vh);
+}
+
+
+.load_cont {
+    @include flex (column, center, center, nowrap);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.load_logo {
+   position: relative;
+   z-index: 1;
+   bottom: -55px;
+   font-family: 'Michroma', sans-serif;
+
+}
+
+.circle-ripple {
+    position: relative;
+    background-color: #000000;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: ripple 0.7s linear infinite;
+  }
+  
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba($color_spec, 0.3),
+                  0 0 0 1em rgba($color_spec, 0.3),
+                  0 0 0 3em rgba($color_spec, 0.3),
+                  0 0 0 5em rgba($color_spec, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 1em rgba($color_spec, 0.3),
+                  0 0 0 3em rgba($color_spec, 0.3),
+                  0 0 0 5em rgba($color_spec, 0.3),
+                  0 0 0 8em rgba($color_spec, 0);
+    }
+}
