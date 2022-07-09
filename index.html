@@ -39,33 +39,23 @@
 </section>
 <nav>
     <div class="hum_cont _anim_items _anim_no_hide"> 
-        <div class="hum_info">
-           <div class="hum_time hum_info_block">
-                <svg class="icon symbol-defs" width="25px" height="25px">
-                    <use href='./img/header_icon/symbol-defs.svg#icon-clock'></use>
-                </svg>
-                <p>c 10:00 до 21:00</p>
-           </div>
-           <!-- <a href="#" class="ham_local hum_info_block">
+        <div class="hum_info ">
+           <a href="#" class="ham_local hum_info_block">
                 <svg class="icon symbol-defs" width="25px" height="25px">
                     <use href='./img/header_icon/symbol-defs.svg#icon-location'></use>
                 </svg>
-                <p>Как добраться</p>
-             </a> -->
-           <a href="#" class="ham_phone hum_info_block">
+             </a>
+           <a href="tel:0509196739" class="ham_phone hum_info_block">
                 <svg class="icon symbol-defs" width="25px" height="25px">
                     <use href='./img/header_icon/symbol-defs.svg#icon-smartphone-call'></use>
                 </svg>
-                <div>
-                    0961111111
-                </div>
             </a>
         </div>
         <a href='#' class="hum_logo">
             <h1>HYPE</h1>
-            <p class="lng-barber-1">это барбершоп</p>
+            <p class="lng-barber-1">парихмахерская</p>
         </a>
-        <div class="ham_menu">
+        <div class="ham_menu hum_cont_block">
             <span class="ham_menu_line"></span>
             <span class="ham_menu_line"></span>
             <span class="ham_menu_line"></span>
@@ -73,47 +63,56 @@
     </div>
     <div class="nav_cont _anim_items _anim_no_hide">
         <div class="nav_menu">
-            <!-- <a class="nav_logo">
-                
-            </a> -->
-            <ul>
-                <li class="nav_item active">  
-                    <!-- <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
-                    </svg> -->
-                    <a href="#" class="nav_logo">HYPE</a></li>
+            <ul class="nav-list">
                 <li class="nav_item">  
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
-                    </svg>
-                    <a href="#about">O нас</a></li>
+                    <a href="#section-1" class="nav_item-link nav_logo active-link">
+                        HYPE       
+                    </a>
+                </li>
+                <li class="nav_item">  
+                    <a href="#section-2" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
+                        </svg>
+                        <p class="lng-nav-about">O нас</p> 
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-salon'></use>
-                    </svg>
-                    <a href="#price">Услуги</a></li>
+                    <a href="#section-3" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-salon'></use>
+                        </svg>
+                        <p class="lng-nav-price">Услуги</p>    
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-salon-chair'></use>
-                    </svg>
-                    <a href="#gallery">Галлеря</a></li>
+                    <a href="#section-4" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-salon-chair'></use>
+                        </svg>
+                        <p class="lng-nav-gallery">Галлеря</p>
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-phone-call'></use>
-                    </svg>
-                    <a href="#feedback">Записаться</a></li>
+                    <a href="#section-5" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-phone-call'></use>
+                        </svg>
+                        <p class="lng-nav-feedback">Записаться</p>
+                    </a>
+                </li>
             </ul>
             <div class="language_block">
                 <span class="lng-langs">Язык:</span>
                 <select class="change-lang">
-                    <option value="ru" selected>RU</option>
-                    <option value="ua">UA</option>
+                    <option value="ua" selected>UA</option>
+                    <option value="ru">RU</option>
                 </select>
             </div>
         </div>
     </div>
 </nav>
-<header>
+<header class="section" id="section-1">
     <div class="conteiner">
         <div class="header_info _anim_items _anim_no_hide">
             <div class="header_info_map">
@@ -121,36 +120,36 @@
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-location'></use>
                     </svg>
-                    <p>просп. Павла Тичины 7</p>
+                    <p class="lng-nav-address">просп. Павла Тичины 7</p>
                 </a>
                 <div class="info_time">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-clock'></use>
                     </svg>
-                    <p>c 10:00 до 21:00</p>
+                    <p>11:00 до 20:00</p>
                 </div>
             </div>
             <div class="header_info_log">
                 <h1>HYPE</h1>
-                <p class="lng-barber-2">это барбершоп</p>
+                <p class="lng-barber-2">это парихмахерская</p>
             </div>
             <div class="header_info_phone">
-                <a href="" class="info_phone">
+                <a href="tel:0509196739" class="info_phone">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-smartphone-call'></use>
                     </svg>
                     <div>
-                        <p>Телефон для записи:</p>
-                        <p>0961111111</p>
+                        <p class="lng-nav-phone">Телефон для записи:</p>
+                        <p>0509196739</p>
                     </div>
                 </a>
             </div>
         </div>
         <div class="header_text">
-            <div class="header_text_main _anim_items _anim_no_hide">
+            <div class="header_text_main _anim_items _anim_no_hide lng-header-text">
                 Мы создадим твой уникальны стиль
             </div>
-            <div class="header_text_low _anim_items _anim_no_hide">
+            <div class="header_text_low _anim_items _anim_no_hide lng-header-text-2">
                 Хочещь подчеркунть свою индивыдуальность.<br> Мы тебя ждем!
             </div>
         </div>
@@ -164,9 +163,9 @@
     </div>
 </header>
     <main>
-     <section class="about section" id="about">
+     <section class="about section" id="section-2">
         <div class="conteiner">
-            <h2 class="_anim_items _anim_no_hide">Что есть в нашем заведении</h2>
+            <h2 class="_anim_items _anim_no_hide lng-about-h2">Что есть в нашем заведении</h2>
             <div class="about_cont">
                 <div class="about_block">
                     <div class="about_blok_top">
@@ -174,14 +173,14 @@
                             1
                         </div>
                         <div class="about_block_icon"> 
-                            <img src="../img/about_icon/chair.png" alt="chair">
+                            <img src="./img/about_icon/chair.png" alt="chair">
                         </div>
                     </div>
                     <div class="about_block_main">
-                        <div class="about_block_name">
+                        <div class="about_block_name lng-about-title-1">
                             Уютная атмосфера
                         </div>
-                        <div class="about_block_text">
+                        <div class="about_block_text lng-about-text-1">
                             Наш барбершоп это место, где вы можете отдохнуть пока о вас заботятся профессионалы.
                         </div>
                     </div>
@@ -192,16 +191,15 @@
                             2
                         </div>
                         <div class="about_block_icon"> 
-                            <img src="../img/about_icon/care.png" alt="chair">
+                            <img src="./img/about_icon/care.png" alt="chair">
                         </div>
                     </div>
                     <div class="about_block_main">
-                        <div class="about_block_name">
+                        <div class="about_block_name lng-about-title-2">
                             Качественная продукция
                         </div>
-                        <div class="about_block_text">
-                            Используем только
-                            проверенную профессиональную продукцию.
+                        <div class="about_block_text lng-about-text-2">
+                            Используем только проверенную профессиональную продукцию.
                         </div>
                     </div>
                 </div>
@@ -211,83 +209,76 @@
                             3
                         </div>
                         <div class="about_block_icon"> 
-                            <img src="../img/about_icon/beer.png" alt="chair">
+                            <img src="./img/about_icon/beer.png" alt="chair">
                         </div>
                     </div>
                     <div class="about_block_main">
-                        <div class="about_block_name">
+                        <div class="about_block_name lng-about-title-3">
                             Бесплатный алкоголь
                         </div>
-                        <div class="about_block_text">
-                            Наш барбершоп это место, где вы можете отдохнуть пока о вас заботятся профессионалы.
+                        <div class="about_block_text lng-about-text-3">
+                            Дарим пиво за стрижку. У нас полный бар напитков на Ваш вкус, но пива у нас очень много.
                         </div>
                     </div>
                 </div>
                 <div class="about_block about_block_img">
-                        <img src="../img/about_icon/barber_chair.png" alt="chair">
+                        <img src="./img/about_icon/barber_chair.png" alt="chair">
                 </div>
-
             </div>
-
         </div>
      </section>
-     <section class="price section" id="price">
+     <section class="price section" id="section-3">
         <div class="conteiner">
-            <h2 class="_anim_items _anim_no_hide">Услуг и цены</h2>
+            <h2 class="_anim_items _anim_no_hide lng-price-h2">Услуг и цены</h2>
             <div class="price_cont">
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-scissor'></use>
                     </svg>
-                    <h3>Стрижка</h3>
+                    <h3 class="lng-price-title-1">Стрижка</h3>
                     <p>от 200 грн</p>
                 </div>
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-manicure'></use>
                     </svg>
-                    <h3>Маникюр</h3>
+                    <h3 class="lng-price-title-2">Маникюр</h3>
                     <p>200 грн</p>
                 </div>
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-pedicure'></use>
                     </svg>
-                    <h3>Педикюр</h3>
+                    <h3 class="lng-price-title-3">Педикюр</h3>
                     <p>350 грн</p>
                 </div>
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-nail-polish'></use>
                     </svg>
-                    <h3>Гель-лак</h3>
+                    <h3 class="lng-price-title-4">Гель-лак</h3>
                     <p>250 грн</p>
                 </div>
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-piercings'></use>
                     </svg>
-                    <h3>Прокол ух</h3>
+                    <h3 class="lng-price-title-5">Прокол ух</h3>
                     <p>500 грн</p>
                 </div>
                 <div class="price_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/price_icon/symbol-defs.svg#icon-clean'></use>
                     </svg>
-                    <h3>Покраска</h3>
+                    <h3 class="lng-price-title-6">Покраска</h3>
                     <p>от 500 грн</p>
                 </div>
-           
-           
-             
-               
-           
             </div>
         </div>
      </section>
-     <section class="gallery" >
-        <h2 id="gallery" class="_anim_items _anim_no_hide">Галерея</h2>
-        <h4 class="_anim_items _anim_no_hide">Всегда рады видеть у нас</h4>
+     <section class="gallery section" id="section-4">
+        <h2 id="gallery" class="_anim_items _anim_no_hide lng-gallery-h2">Галерея</h2>
+        <h4 class="_anim_items _anim_no_hide lng-gallery-h4">Всегда рады видеть у нас</h4>
         <div class="gallery_cont">
             <div class="swiper gallery-slider">
             <div class="swiper-wrapper">
@@ -320,29 +311,32 @@
     </section>
     <section class="insta">
         <div class="conteiner">
-            <h2 class="_anim_items _anim_no_hide">Наш Instagram</h2>
-            <h4 class="_anim_items _anim_no_hide">В инстаграме мы делимся своими работами, жизнью студии. Присоединяйтесь.</h4>
+            <h2 class="_anim_items _anim_no_hide lng-insta-h2">Наш Instagram</h2>
+            <h4 class="_anim_items _anim_no_hide lng-insta-h4">В инстаграме мы делимся своими работами, жизнью студии. Присоединяйтесь.</h4>
             <div class="insta_cont">
-                <a href=""><img src="../img/insta_icon/insta.png" alt="insta" width="200px" height="200px"></a>
-                <a href="" class="inst_btn btn">Подписывайтесь</a>
+                <a href="https://instagram.com/hype_professional?igshid=YmMyMTA2M2Y="><img src="./img/insta_icon/insta.png" alt="insta" width="200px" height="200px"></a>
+                <a href="https://instagram.com/hype_professional?igshid=YmMyMTA2M2Y=" class="inst_btn btn lng-insta-btn">Подписывайтесь</a>
             </div>
         </div>
     </section>
-     <section class="feedback section" id="feedback">
+     <section class="feedback section" id="section-5">
         <div class="conteiner">
-            <h2 class="_anim_items _anim_no_hide">Обратная связь</h2>
-            <h4 class="_anim_items _anim_no_hide">Оставте свой номер телефон и мы обязательно Вам перезвоним.</h4>
+            <h2 class="_anim_items _anim_no_hide lng-feedback-h2">Записаться</h2>
+            <h4 class="_anim_items _anim_no_hide lng-feedback-h4">Оставте свой номер телефон и мы обязательно Вам перезвоним.</h4>
             <div class="feedback_cont">
-                <div class="feedback_name">
+                <div class="feedback_name lng-feedback-name">
                     Имя:
-                    <input type="text">
+                    <input class="input_name" type="text" >
                 </div>
-                <div class="feedback_number">
+                <div class="feedback_number lng-feedback-phone">
                     Номер телефонa:
-                    <input type="number">
+                    <input  class="input_phone" type="number">
                 </div>
             </div>
-            <input class="btn" type="button" value="Отправить">
+            <div class="btn_block">
+                <div class="btn btn_feedback">Отправить</div>
+            </div>
+            <!-- <input class="btn" type="button" value="Отправить"> -->
         </div>
      </section>
     </main>
@@ -353,17 +347,17 @@
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-clock'></use>
                     </svg>
-                    <p>Каждый день<br>c 10:00 до 20:00</p>
+                    <p class="lng-footer-time">Каждый день<br>c 10:00 до 20:00</p>
                 </div>
-                <a href="#" class="footer_block">
+                <a href="tel:0509196739" class="footer_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-smartphone-call'></use>
                     </svg>
                     <div>
-                        0961111111
+                        0509196739
                     </div>
                     </a>
-                <a href='#' class="footer_block">
+                <a href='https://instagram.com/hype_professional?igshid=YmMyMTA2M2Y=' class="footer_block">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-instagram'></use>
                     </svg>
@@ -378,7 +372,8 @@
         </div>
     </div>
 </footer>
+    <script  src="js/translate.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src='js/script.js'></script>
+    <script  src='js/script.js'></script>
 </body>
 </html>
