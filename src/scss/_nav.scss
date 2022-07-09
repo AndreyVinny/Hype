@@ -10,7 +10,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 10;
-    transition: all 1.2s ease;
+    transition: all 1.9 s ease;
     &._active {
         width: 120px;
     }
@@ -28,39 +28,46 @@
 }
 
 .nav_menu {
-    ul {
+    .nav-list {
         height: 100%;
         width: 100%;
-        @include flex (column, space-around, center, nowrap);
+        @include flex (column, space-between, center, nowrap);
         .nav_item {
-            @include flex (column, space-around, center, nowrap);
             cursor: pointer;
             width: 100%;
-            &.active {
-                background-color: rgb(225, 153, 68);
-            }
-            &:hover{
-                background-color: rgb(225, 153, 68);
-            }
-            a {
-                padding: 25px 0px 30px;
-                @include flex (row, center, center, nowrap);
+            height: 20%;
+            .nav_item-link {
+                @include flex (column, center, center, nowrap);
+                width: 100%;
+                height: 100%;
                 color: #fff;
                 text-transform: uppercase;
+                svg {
+                    fill: rgb(255, 255, 255);
+                    width: 35px;
+                    height: 35px;
+                    pointer-events: none;
+                }
+                p {
+                    padding-top: 20px;
+                    pointer-events: none;
+                }
+                &.active-link {
+                    background-color: rgb(225, 153, 68);
+                }
+                &:hover{
+                    background-color: rgb(245, 150, 41) !important;
+                    position: relative;
+                    z-index: 1000;
+                }
             }
-            svg {
-                fill: rgb(255, 255, 255);
-                width: 40px;
-                height: 40px;
-                margin-top: 10px;
-            }
+           
         }
     }
 }
 
-
 .language_block {
-    margin-bottom: 15px;
+    margin: 15px 0px;
     font-size: 18px;
     select {
         background-color: $color_text_b;
@@ -78,29 +85,31 @@
 
 .ham_menu {
     @include flex (column, flex-start, flex-end, nowrap);
-    margin: 10px 30px;
+    margin-right: 15px;
     cursor: pointer;
     display: none;
-    padding-top: 10px;
     .ham_menu_line {
         display: block;
         width: 35px;
         height: 4px;
         margin-bottom: 5px;
-        background: rgb(255, 255, 255);
+        background: $color_text_w;
     }
 }
 
-.hum_info_block {
-    @include flex (row, flex-start, flex-end, nowrap);
-}
+// .hum_info_block {
+//     @include flex (row, flex-start, flex-end, nowrap);
+// }
 
 // -------------------notebook------------------
 
 @media (max-width: $notebook){
     .nav_cont {
         width: 90px;
-        font-size: 14px;
+        font-size: 13px;
+        &._active {
+            width: 90px;
+        }
     }
 
     .nav_menu {
@@ -120,11 +129,12 @@
 @media (max-width: $tablet) {
     .nav_cont  {
         width: 100vw;
-        height: 100%;
-        display: none;
+        height: 100vh;
+        top: -1100px;
+        transition: all 1s;
         &.active {
-            display: block;
             overflow: hidden;
+            top: 0px;
         }
         &._active {
             width: 100vw;
@@ -139,16 +149,27 @@
     }
 
     .nav_menu {
-        ul{
-            padding-top: 50px;
+        .nav-list{
+            padding-top: 90px;
             .nav_item {
                 @include flex (row, center, center, nowrap);
+                .nav_item-link {
+                    @include flex (row, center, center, nowrap);
+                    svg {               
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 15px;
+                        }
+                    p {
+                        padding-top: 0;
+                        }
                 a {
                     padding: 45px 0px 30px 25px;
                 }
             }
         }    
     }
+}
 
     .language_block {
         @include flex (row, center, center, nowrap);
@@ -160,16 +181,14 @@
                 color: rgb(225, 153, 68);
             }
         }
-        
     }
     
-
     .hum_cont {
         @include flex (row, space-between, center, nowrap);
         background: rgb(0,0,0);
         background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.819765406162465) 90%, rgba(0,0,0,0) 100%);
         width: 100%;
-        height: 100px;
+        height: 90px;
         position: fixed;
         top: 0;
         right: 0;
@@ -184,15 +203,15 @@
        }
         svg {
             fill: #fff;
-            width: 27px;
-            height: 27px;
+            width: 30px;
+            height: 30px;
             padding: 2px 5px 0px;
+            margin-left: 10px;
         }
         a {
             color: #fff;
             font-size: 24px;
             letter-spacing: 1px;
-            padding-top: 10px;
             &:hover {
                 div {
                     transition: 0.5s;
@@ -209,8 +228,10 @@
         }
     }
 
+
     .hum_logo {
         text-align: center;
+        width: 70%;
         h1 {
             font-family: 'Michroma', sans-serif;
             font-size: 38px;
@@ -257,9 +278,21 @@
     }
 
     .ham_menu {
-        margin: 5px 20px;
+        @include flex (column, flex-end, flex-end, nowrap);
+
     }
 
+    .ham_local {
+        display: none;
+       }
+    
+        .hum_cont {
+            svg {
+                width: 35px;
+                height: 35px;
+                padding: 2px 5px 0px;
+            }
+        }
 }
 
 @media (max-width: $mobile-mini) {
@@ -281,18 +314,8 @@
 
     .hum_time {
         display: none;
-    }
-
-    .ham_phone {
-        @include flex (column, center, center, nowrap);
-    }
-
-    .ham_menu {
-        margin: 10px 10px;
-    }
-
+    } 
 }
-
 // @media (max-width: $notebook) { 
     //     .ham_menu {
     //         position: relative;

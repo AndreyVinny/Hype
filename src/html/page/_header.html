@@ -6,33 +6,23 @@
 </section>
 <nav>
     <div class="hum_cont _anim_items _anim_no_hide"> 
-        <div class="hum_info">
-           <div class="hum_time hum_info_block">
-                <svg class="icon symbol-defs" width="25px" height="25px">
-                    <use href='./img/header_icon/symbol-defs.svg#icon-clock'></use>
-                </svg>
-                <p>c 10:00 до 21:00</p>
-           </div>
-           <!-- <a href="#" class="ham_local hum_info_block">
+        <div class="hum_info ">
+           <a href="#" class="ham_local hum_info_block">
                 <svg class="icon symbol-defs" width="25px" height="25px">
                     <use href='./img/header_icon/symbol-defs.svg#icon-location'></use>
                 </svg>
-                <p>Как добраться</p>
-             </a> -->
-           <a href="#" class="ham_phone hum_info_block">
+             </a>
+           <a href="tel:0509196739" class="ham_phone hum_info_block">
                 <svg class="icon symbol-defs" width="25px" height="25px">
                     <use href='./img/header_icon/symbol-defs.svg#icon-smartphone-call'></use>
                 </svg>
-                <div>
-                    0961111111
-                </div>
             </a>
         </div>
         <a href='#' class="hum_logo">
             <h1>HYPE</h1>
-            <p class="lng-barber-1">это барбершоп</p>
+            <p class="lng-barber-1">парихмахерская</p>
         </a>
-        <div class="ham_menu">
+        <div class="ham_menu hum_cont_block">
             <span class="ham_menu_line"></span>
             <span class="ham_menu_line"></span>
             <span class="ham_menu_line"></span>
@@ -40,47 +30,56 @@
     </div>
     <div class="nav_cont _anim_items _anim_no_hide">
         <div class="nav_menu">
-            <!-- <a class="nav_logo">
-                
-            </a> -->
-            <ul>
-                <li class="nav_item active">  
-                    <!-- <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
-                    </svg> -->
-                    <a href="#" class="nav_logo">HYPE</a></li>
+            <ul class="nav-list">
                 <li class="nav_item">  
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
-                    </svg>
-                    <a href="#about">O нас</a></li>
+                    <a href="#section-1" class="nav_item-link nav_logo active-link">
+                        HYPE       
+                    </a>
+                </li>
+                <li class="nav_item">  
+                    <a href="#section-2" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-hair-salon'></use>
+                        </svg>
+                        <p class="lng-nav-about">O нас</p> 
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-salon'></use>
-                    </svg>
-                    <a href="#price">Услуги</a></li>
+                    <a href="#section-3" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-salon'></use>
+                        </svg>
+                        <p class="lng-nav-price">Услуги</p>    
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-salon-chair'></use>
-                    </svg>
-                    <a href="#gallery">Галлеря</a></li>
+                    <a href="#section-4" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-salon-chair'></use>
+                        </svg>
+                        <p class="lng-nav-gallery">Галлеря</p>
+                    </a>
+                </li>
                 <li class="nav_item">
-                    <svg class="icon symbol-defs" width="25px" height="25px">
-                        <use href='./img/nav_icon/symbol-defs.svg#icon-phone-call'></use>
-                    </svg>
-                    <a href="#feedback">Записаться</a></li>
+                    <a href="#section-5" class="nav_item-link">
+                        <svg class="icon symbol-defs" width="25px" height="25px">
+                            <use href='./img/nav_icon/symbol-defs.svg#icon-phone-call'></use>
+                        </svg>
+                        <p class="lng-nav-feedback">Записаться</p>
+                    </a>
+                </li>
             </ul>
             <div class="language_block">
                 <span class="lng-langs">Язык:</span>
                 <select class="change-lang">
-                    <option value="ru" selected>RU</option>
-                    <option value="ua">UA</option>
+                    <option value="ua" selected>UA</option>
+                    <option value="ru">RU</option>
                 </select>
             </div>
         </div>
     </div>
 </nav>
-<header>
+<header class="section" id="section-1">
     <div class="conteiner">
         <div class="header_info _anim_items _anim_no_hide">
             <div class="header_info_map">
@@ -88,36 +87,36 @@
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-location'></use>
                     </svg>
-                    <p>просп. Павла Тичины 7</p>
+                    <p class="lng-nav-address">просп. Павла Тичины 7</p>
                 </a>
                 <div class="info_time">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-clock'></use>
                     </svg>
-                    <p>c 10:00 до 21:00</p>
+                    <p>11:00 до 20:00</p>
                 </div>
             </div>
             <div class="header_info_log">
                 <h1>HYPE</h1>
-                <p class="lng-barber-2">это барбершоп</p>
+                <p class="lng-barber-2">это парихмахерская</p>
             </div>
             <div class="header_info_phone">
-                <a href="" class="info_phone">
+                <a href="tel:0509196739" class="info_phone">
                     <svg class="icon symbol-defs" width="25px" height="25px">
                         <use href='./img/header_icon/symbol-defs.svg#icon-smartphone-call'></use>
                     </svg>
                     <div>
-                        <p>Телефон для записи:</p>
-                        <p>0961111111</p>
+                        <p class="lng-nav-phone">Телефон для записи:</p>
+                        <p>0509196739</p>
                     </div>
                 </a>
             </div>
         </div>
         <div class="header_text">
-            <div class="header_text_main _anim_items _anim_no_hide">
+            <div class="header_text_main _anim_items _anim_no_hide lng-header-text">
                 Мы создадим твой уникальны стиль
             </div>
-            <div class="header_text_low _anim_items _anim_no_hide">
+            <div class="header_text_low _anim_items _anim_no_hide lng-header-text-2">
                 Хочещь подчеркунть свою индивыдуальность.<br> Мы тебя ждем!
             </div>
         </div>

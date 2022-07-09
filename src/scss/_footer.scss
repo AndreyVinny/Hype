@@ -2,6 +2,7 @@
     margin-left: 120px;
     .footer_info {
         @include flex (row, space-around, center, nowrap);
+        margin-bottom: 15px;
         .footer_block{
             @include flex (row, center, center, nowrap);
             color: $color_text_b;

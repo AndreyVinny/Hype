@@ -11,7 +11,7 @@ let path = {
     src: {
         html: [source_folder + '/html/index.html', "!" + source_folder + '/_*.html'],
         css: source_folder + '/scss/style.scss',
-        js: source_folder + '/js/script.js',
+        js: [source_folder + '/js/script.js', source_folder + '/js/translate.js'],
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,wepb}',
     },
     watch: {

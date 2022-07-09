@@ -27,9 +27,7 @@
 .load_logo {
    position: relative;
    z-index: 1;
-   bottom: -55px;
    font-family: 'Michroma', sans-serif;
-
 }
 
 .circle-ripple {
@@ -39,6 +37,7 @@
     height: 100px;
     border-radius: 50%;
     animation: ripple 0.7s linear infinite;
+    transform: translateY(-50%);
   }
   
 

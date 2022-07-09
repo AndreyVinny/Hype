@@ -11,7 +11,6 @@ header {
 
 }
 
-
 .header_info {
     @include flex (row, space-between, flex-start, nowrap);
     padding-top: 25px;
@@ -148,6 +147,12 @@ header {
 
 
 @media (max-width: $notebook){
+    .header_info_log {
+        p {
+            font-size: 27px;
+        }
+    }
+
     .header_text {
         height: 70vh;
         width: 60vw;
@@ -160,6 +165,27 @@ header {
     
         }
     }
+
+    .info_phone {
+        div {
+            margin-left: 15px;
+            color: $color_text_w;
+            p {
+                &:first-of-type {
+                    font-size: 11px;
+                }
+                &:last-child {
+                    font-size: 30px; 
+                 }
+                }
+        }
+    }
+
+    .header_info_map {
+    p {
+        font-size: 12px;
+    }
+}
 }
 
 @media (max-width: $tablet){

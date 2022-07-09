@@ -1,41 +1,32 @@
-// window.addEventListener('scroll', () => {
-// 	let scrollDistance = window.scrollY;
+const observer = new IntersectionObserver((entries)=> {
+    entries.forEach((enrty)=>{
+        if(enrty.isIntersecting){
+            document.querySelectorAll('.nav_item-link').forEach((link)=>{
+                link.classList.toggle(
+                    'active-link', link.getAttribute('href').replace('#', '') === enrty.target.id
+                );
+            })
+        }
+    });
+}, {
+    threshold: 1,
+})
 
-// 	if (window.innerWidth > 768) {
-// 		document.querySelectorAll('.section').forEach((el, i) => {
-// 			if (el.offsetTop - document.querySelector('ul').clientHeight <= scrollDistance) {
-// 				document.querySelectorAll('ul li').forEach((el) => {
-// 					if (el.classList.contains('active')) {
-// 						el.classList.remove('active');
-// 					}
-// 				});
+document.querySelectorAll('.section').forEach((section)=> {observer.observe(section)});
 
-// 				document.querySelectorAll('ul li').classList.add('active');
-// 			}
-// 		});
-// 	}
-// });
+document.querySelector('.nav-list').addEventListener('click', (event) => {
+    if(event.target.classList.contains('nav_item-link')) {
+        event.preventDefault();
+        const id = event.target.getAttribute('href').replace('#', '');
 
-// window.addEventListener('scroll', () => {
-// 	let scrollDistance = window.scrollY;
-
-// 	if (window.innerWidth > 768) {
-// 		document.querySelectorAll('.section').forEach((el, i) => {
-// 			if (el.offsetTop - document.querySelector('.nav').clientHeight <= scrollDistance) {
-// 				document.querySelectorAll('.nav a').forEach((el) => {
-// 					if (el.classList.contains('active')) {
-// 						el.classList.remove('active');
-// 					}
-// 				});
-
-// 				document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active');
-// 			}
-// 		});
-// 	}
-// });
+        window.scrollTo({
+            top: document.getElementById(id).offsetTop,
+            behavior: 'smooth',
+        })
+    }
+})
 let menu = document.querySelector('.nav_cont'),
     burger = document.querySelector('.ham_menu'),
-    nav_logo = document.querySelector('.nav_logo'),
     body = document.querySelector('body');
 
     
@@ -44,9 +35,6 @@ burger.addEventListener('click', AddActive)
 function AddActive () {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
-    body.classList.toggle('active');
-    nav_logo.classList.toggle('active');
-
 }
 
 let navLink = document.querySelectorAll('.nav_item');
@@ -56,8 +44,6 @@ navLink.forEach(n => n.addEventListener('click', closeMenu));
 function closeMenu () {
     burger.classList.remove('active');
     menu.classList.remove('active');
-    body.classList.toggle('active');
-    nav_logo.classList.toggle('active');
 }
 
 const animItems = document.querySelectorAll('._anim_items');
@@ -182,45 +168,7 @@ const loader = document.querySelector('.load');
 window.addEventListener('load', () => {
     loader.classList.add('hidden');
 })
-const selcet = document.querySelector('select');
-const allLangs = ['ru', 'ua'];
 
-const langArr = {
-    'barber-1' : {
-        'ua': 'це цирюлня',
-        'ru': 'это барбершоп',
-    },
-    'barber-2' : {
-        'ua': 'це цирюлня',
-        'ru': 'это барбершоп',  
-    },
-    'langs' : {
-        'ua': 'Мова:',
-        'ru': 'Язык:',
-    },
-}
-
-selcet.addEventListener('change', ()=> {
-    let lang = selcet.value;
-    location.href = window.location.pathname + `#${lang}`;
-    location.reload();
-});
-
-function changeLang(){
-    let hash = window.location.hash;
-    hash = hash.substring(1);
-
-    if(!allLangs.includes(hash)){
-        location.href = window.location.pathname + '#ru';
-    }
-    selcet.value = hash;
-
-    for (let key in langArr) {
-        document.querySelector('.lng-' + key).innerHTML = langArr[key][hash];
-    }
-}
-
-changeLang();
 
 
 

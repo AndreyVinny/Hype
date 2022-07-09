@@ -3,7 +3,8 @@
 @@include('animation.js')
 @@include('slider.js')
 @@include('load.js')
-@@include('langs.js')
+@@include('bot.js')
+
 
 
 
