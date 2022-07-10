@@ -1,7 +1,5 @@
-window.addEventListener('load', () => {
-    
 const selcet = document.querySelector('select');
-const allLangs = ['ru', 'ua'];
+const allLangs = ['ua', 'ru'];
 
 const langArr = {
     'barber-1' : {
@@ -152,9 +150,10 @@ selcet.addEventListener('change', ()=> {
 function changeLang(){
     let hash = window.location.hash;
     hash = hash.substring(1);
+    
 
     if(!allLangs.includes(hash)){
-        location.href = window.location.pathname + '#ru';
+        location.href = window.location.pathname + '#ua';
     }
     selcet.value = hash;
 
@@ -164,5 +163,3 @@ function changeLang(){
 }
 
 changeLang();
-})
-

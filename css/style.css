@@ -1059,6 +1059,7 @@ header {
             align-items: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    margin-bottom: 55px;
   }
   .language_block div {
     font-size: 22px;
@@ -1480,10 +1481,6 @@ header {
   }
 }
 @media (max-width: 420px) {
-  .price_block svg {
-    width: 100px;
-    height: 100px;
-  }
   .price_block h3 {
     font-size: 20px;
     padding: 10px 0px;
