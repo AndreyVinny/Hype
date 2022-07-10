@@ -173,6 +173,7 @@
 
     .language_block {
         @include flex (row, center, center, nowrap);
+        margin-bottom: 55px;
         div {
             font-size: 22px;
             cursor: pointer;
